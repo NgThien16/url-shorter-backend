@@ -1,0 +1,46 @@
+{
+  "Routes": [
+    // 1. Tuyến đường cho API Rút gọn (POST)
+    {
+      "DownstreamPathTemplate": "/api/Urls",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7204
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/shorten",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // 2. Tuyến đường lấy danh sách hoặc lấy chi tiết (GET)
+    {
+      "DownstreamPathTemplate": "/api/Urls",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7204
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/urls",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // 3. Tuyến đường cho API Điều hướng (Nếu bạn có làm hàm Redirect)
+    {
+      "DownstreamPathTemplate": "/api/Urls/{code}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7204
+        }
+      ],
+      "UpstreamPathTemplate": "/r/{code}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5001"
+  }
+}
