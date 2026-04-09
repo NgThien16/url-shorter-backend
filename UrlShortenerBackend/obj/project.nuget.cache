@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mwzXl/GD5wQ=",
+  "dgSpecHash": "KtwL2zfuSSs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend.csproj",
+  "projectFilePath": "C:\\Users\\MSI\\source\\repos\\UrlShortener\\UrlShortenerBackend\\UrlShortenerBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MSI\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
