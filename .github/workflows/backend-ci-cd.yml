@@ -46,6 +46,7 @@ jobs:
         with:
           context: .
           push: true
+          # Thay ${{ secrets.DOCKERHUB_USERNAME }} bằng thiennn16 trực tiếp
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/url-shortener-api:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/url-shortener-api:${{ github.sha }}
+            thiennn16/url-shortener-api:latest
+            thiennn16/url-shortener-api:${{ github.sha }}
